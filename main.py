@@ -21,6 +21,7 @@ intents.members = True
 bot = commands.Bot(command_prefix='nyan', intents=intents)
 
 nyan_random_reply = ['O.O"?','apa..','...','ga','apa ish!?','g','ga mau',':p','apa sayang',':/']
+nyan_approval = ['boleh','nda bole']
 
 @bot.event
 async def on_ready():
@@ -34,6 +35,9 @@ async def on_message(message):
 
     if "nyan" in message.content.lower():
         await message.channel.send(random.choice(nyan_random_reply))
+
+    if "boleh ga" in message.content.lower():
+        await message.channel.send(random.choice(nyan_approval))
 
     if "nyan link" in message.content.lower():
         await message.channel.send(f'Nih, jangan sembarang invite orang yaa, {message.author.mention} :3 \nhttps://discord.gg/jywWK32Fgr')
