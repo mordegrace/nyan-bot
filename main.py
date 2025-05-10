@@ -21,7 +21,7 @@ intents.members = True
 bot = commands.Bot(command_prefix='nyan', intents=intents)
 
 nyan_random_reply = ['O.O"?','apa..','...','ga','apa ish!?','g','ga mau',':p','apa sayang',':/']
-nyan_approval = ['boleh','nda bole']
+nyan_approval = ['bole','nda bole']
 
 @bot.event
 async def on_ready():
